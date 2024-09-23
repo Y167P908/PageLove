@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dedica para ti</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+    <style>
+		.card-category {
+			transition: transform 0.30s ease, box-shadow 0.30s ease; /* Transición suave */
+			cursor: pointer; /* Cambia el cursor al pasar por encima */
+			overflow: hidden; /* Oculta el contenido que sobresale */
+			position: relative; /* Para el posicionamiento de la imagen */
+		}
+	
+		.card-category img {
+			width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho */
+			height: auto; /* Mantiene la relación de aspecto */
+			border-radius: 15px; /* Bordes redondeados */
+			transition: transform 1.3s ease; /* Suave transición para la imagen */
+		}
+	
+		.card-category:hover {
+			transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al pasar el ratón */
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+		}
+	
+		.card-category:hover img {
+			transform: scale(1.1); /* Aumenta la imagen al pasar el ratón */
+		}
+	
+		.card-category:active {
+			transform: scale(0.95); /* Efecto de contracción al hacer clic */
+		}
+	</style>
+	
+</head>
+<body>
+    <header>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="customer-support">
+                    <i class="fa-solid fa-gift large-icon"></i>
+                </div>
+                <div class="container-logo">
+                    <h1 class="logo"><a href="/">Un regalo para ti</a></h1>
+                </div>
+                <div class="container-user">
+                    <i class="fa-solid fa-gift large-icon"></i>
+                    <div class="content-shopping-cart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-navbar">
+            <nav class="navbar container">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Lol</a></li>
+                    <li><a href="Albuk.html">Tangamangapio</a></li>
+                    <li><a href="tarjetas.html">Notas</a></li>
+                </ul>
+                <form class="search-form">
+                    <input type="search" placeholder="Buscar..." />
+                    <button class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="content-banner">
+            <p>si ves esto te amo</p>
+            <h2>100% Hecho con mucho<br />cariño y con amor</h2>
+            <a href="#">Tq de aqui hasta la luna</a>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="container container-features">
+            <!-- Las tarjetas de los poemas aquí -->
+        </section>
+
+		<section class="container top-categories">
+			<h1 class="heading-1">
+				<br>
+				Elige cual ver primero :3
+			</h1>
+			<div class="container-categories">
+				<div class="card-category category-moca" onclick="navigateTo('Index.flower.html')">
+					
+					<a href="#" class="ver-mas">CLICK AQUI VV</a>
+				</div>
+				<div class="card-category category-expreso" onclick="navigateTo('Cart.html')">
+					
+					
+					<a href="#" class="ver-mas">CLICK AQUI VV</a>
+				</div>
+				<div class="card-category category-capuchino" onclick="navigateTo('Minijim.html')">
+					
+					
+					<a href="#" class="ver-mas">CLICK AQUI VV</a>
+				</div>
+			</div>
+		</section>
+		
+
+        <footer class="footer">
+            <div class="container container-footer">
+                <div class="love-message">
+                    <p>El amor es un arte que se pinta en el corazón. Cada día, cada sonrisa, cada momento compartido es una obra maestra.</p>
+                    <p>Que la magia del amor nos inspire, como lo hace el arte que nos rodea, como la magia que hace tu corazon con el mio.</p>
+                </div>
+                <div class="copyright">
+                    <p>
+                        Desarrollado con amor por Programación para el mundo &copy; 2024SIPONGOCOPYRIDEOK
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+    <script>
+        function navigateTo(url) {
+            window.location.href = url; // Navegar a la URL especificada
+        }
+    </script>
+</body>
+</html>

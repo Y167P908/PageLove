@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Álbum Favorito</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 50px;
+            background-color: #f4f4f4; /* Color de fondo de respaldo */
+            background-image: url('https://i.pinimg.com/originals/aa/b4/61/aab461675a647f48b53d6543097f91b0.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #e2e5e7;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #cdd3da;
+        }
+
+        .album-card {
+            perspective: 1000px; /* Para el efecto 3D */
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 300px; /* Ancho de la tarjeta */
+            height: 400px; /* Alto de la tarjeta */
+            transform-style: preserve-3d; /* Para el efecto 3D */
+            transition: transform 0.6s; /* Duración de la transición */
+        }
+
+        .album-card:hover .card-inner {
+            transform: rotateY(180deg); /* Efecto de rotación en 3D */
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Ocultar la parte trasera al rotar */
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-front {
+            background-image: url('https://media.es.wired.com/photos/6478e75588218b01bf4a1c20/4:3/w_2668,h_2001,c_limit/luna%20de%20fresa%20cuando%20como%20verla.jpg');
+            background-size: cover; /* Ajustar la imagen al tamaño de la tarjeta */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white; /* Texto blanco para mayor contraste */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra de texto */
+        }
+
+        .card-back {
+            background-color: #015e4b; /* Color de fondo de la parte trasera */
+            color: white;
+            transform: rotateY(180deg); /* Rotar la parte trasera */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .album-link {
+            padding: 15px 30px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .album-link:hover {
+            background-color: #c0392b; /* Color de fondo al pasar el mouse */
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>New Album</h1>
+    <p>No son muchas canciones pero espero que te guste.</p>
+
+    <div class="album-card">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>🎶 Luna 🎶</h2>
+               
+            </div>
+            <div class="card-back">
+                <p>Gracias por aguantarme</p>
+        
+                <a href="https://open.spotify.com/playlist/04QwJcL3TcjWJ4tAT9gy1y?si=DOviWsqnRAe3NRlL6tIohg" class="album-link">
+                    Escuchar Ahora
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

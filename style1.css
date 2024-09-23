@@ -1,0 +1,133 @@
+/* Reset CSS */
+* {
+  min-width: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url('https://i.pinimg.com/originals/30/95/27/3095274b2d5bbe709a491f3cf178ae80.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-letter {
+  position: relative;
+}
+
+.cover {
+  position: absolute;
+  border-left: 250px solid transparent; /* Aumentado el tamaño del borde izquierdo */
+  border-right: 250px solid transparent; /* Aumentado el tamaño del borde derecho */
+  border-top: 150px solid #ff5252; /* Aumentado el tamaño del borde superior */
+  border-bottom: 150px solid transparent; /* Aumentado el tamaño del borde inferior */
+  transition: transform .75s;
+  transform-origin: top;
+}
+
+.paper {
+  position: absolute;
+  padding: 1.5rem;
+  line-height: 1.6rem;
+  right: 5px;
+  z-index: -1;
+  background: white;
+  width: 480px; /* Aumentado el ancho */
+  height: 230px; /* Aumentada la altura */
+  overflow: hidden;
+  transition: all .75s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.letter {
+  border-left: 250px solid #ff8a8a; /* Ajustado para que coincida con el tamaño del sobre */
+  border-right: 250px solid #ff8a8a; /* Ajustado para que coincida con el tamaño del sobre */
+  border-top: 150px solid transparent; /* Aumentado el tamaño del borde superior */
+  border-bottom: 100px solid #ff7070;
+}
+
+.options {
+  display: flex;
+  gap: 5rem;
+}
+
+button {
+  color: #ff3234;
+  font-weight: 600;
+  border-radius: 5px;
+  background: #f8e3e9;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ff5252;
+  cursor: pointer;
+  transition: background .3s, color .3s;
+}
+
+button:hover {
+  background: #ff7070;
+  color: white;
+}
+
+.open-cover {
+  transform: rotateX(180deg);
+}
+
+.open-paper {
+  animation: openPaper .5s forwards;
+}
+
+@keyframes openPaper {
+  0% { top: 0; }
+  100% { top: -120px; }
+}
+
+.close-paper {
+  animation: closePaper .5s forwards;
+}
+
+@keyframes closePaper {
+  0% { top: -120px; }
+  100% { top: 0; }
+}
+
+.heart {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 46.5%;
+  margin: auto;
+  font-size: 4rem;
+  color: #ff5252;
+  animation: crecer 1s forwards;
+}
+
+@keyframes crecer {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
